@@ -1,0 +1,34 @@
+1.roll dice, upgrade
+melempar dadu
+
+2. info <nama petak>
+- nama petak dari file eksternal
+- pakai array of struct
+
+3. buy
+- ada informasi petak saat ini
+
+4. sell <nama petak>
+- mirip info <nama petak>
+- menjual ke public (offered)
+
+5. sell bank <nama petak>
+- bank infinity
+
+6. show offered
+- menampilkan semua list offered
+
+7.buy offered <nama petak>
+- mirip buy <nama petak>
+
+8. kartu chance, membayar pajak, bonus uang
+- jelas
+
+9. board
+-ga jelas
+
+10. leaderboard, host <nama kota>, travel <nama kota>, end turn
+- jelas
+
+11. save, load
+- jelas
