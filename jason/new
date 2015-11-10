@@ -1,0 +1,63 @@
+/* Alstrukdat */
+
+void SELL(){
+
+	/* Kamus Lokal */
+	int i;
+	boolean found;
+	
+	/* Algoritma */
+	i = 1;
+	found = false;
+	while((i <= Neff) && (!found)){
+		if(input == petak[i].namakota){
+			found = true;
+		}
+		else{
+			i = i + 1;
+		}
+	}
+	if(found && (petak[i].owner == player)){
+		petak[i].offer = true;
+		printf("%s dimasukkan ke dalam list penjualan.", petak[i].namakota); 
+		printf("Jika %s terjual, kamu akan mendapatkan uang hasil penjualan.\n", petak[i].namakota);
+	}
+	else if(!found){
+		printf("%s bukan merupakan nama kota yang valid.\n", input);
+	}
+	else{
+		printf("%s bukan properti milikmu.\n", input);
+	}
+}
+
+
+void SELL_BANK(){
+
+	/* Kamus Lokal */
+	int i;
+	boolean found;
+	
+	/* Algoritma */
+	i = 1;
+	found = false;
+	while((i <= Neff) && (!found)){
+		if(input == petak[i].namakota){
+			found = true;
+		}
+		else{
+			i = i + 1;
+		}
+	}
+	if(found && (petak[i].owner == player)){
+		petak[i].owner = 0;
+		player.money = player.money + x;
+		printf("%s dijual ke bank dengan harga %dM.\n", petak[i].namakota, x);
+		printf("Uangmu sekarang %dM.\n", player.money);
+	}
+	else if(!found){
+		printf("%s bukan merupakan nama kota yang valid.\n", input);
+	}
+	else{
+		printf("%s bukan properti milikmu.\n", input);
+	}
+}
